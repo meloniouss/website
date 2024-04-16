@@ -1,0 +1,30 @@
+<div class="parent">
+    <div class="div1">
+        <table id="headertable">
+            <tr id="title1">
+                <td><h1>PAWSOME</h1></td>
+            </tr>
+            <tr>
+                <td><a href="index.html"><img src="dog.png" alt="Jack Russel Terrier smiling"></a></td>
+            </tr>
+            <tr>
+                <td id="title2"><h1>COMPANIONS</h1></td>
+            </tr>
+            <tr>
+                <td id="date-time"></td>
+                
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        function updateDateTime()
+            {
+            var currentDate = new Date();
+            var dateString = currentDate.toLocaleDateString();
+            var timeString = currentDate.toLocaleTimeString();
+            document.getElementById('date-time').textContent = dateString + ' ' + timeString;
+            }
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+    </script>

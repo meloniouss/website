@@ -1,0 +1,377 @@
+.div1{
+    padding-bottom: 10px;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: grid;
+    color: black;
+    box-sizing: border-box;
+    border-bottom: 3px solid black;
+    background-image: linear-gradient(-45deg, #FA8072 1%, #fe921f);
+   
+}
+body  {
+    top:0;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.div3{
+    
+    display:grid;
+    font-family: 'Lato', sans-serif; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    text-align: center;
+    text-transform: uppercase;
+    bottom: 0px;
+    background-color: black;
+    color: black;
+    width: 100%;
+    
+    
+}
+.div3 table{
+    
+    height: 100%;
+    width: 100%;
+    font-size: 20.75px;
+    top: 0px;
+    bottom: 0px;
+    background-color:black;
+    padding-top: 0;
+    margin-top: 0;
+   
+}
+
+
+
+.div3 table td:hover{
+    background-color: #fe921f;
+    color:white;
+    background-image: linear-gradient(to left, #fe921f 1%,  #FA8072);
+    a{color: white;}
+}
+
+.div3 table td a{
+    color: #fe921f;
+    letter-spacing: 3px;
+    text-wrap: pretty;
+    
+}
+
+.div3 table td a:hover{
+    color: black;
+    letter-spacing: 3px;
+    text-wrap: pretty;
+    font-weight: 700;
+    text-shadow: -3px 3px #fe921f, -5px 5px #558abb,  -7px 7px #00d062;
+}
+
+
+#headertable{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+
+fieldset{
+    margin-right: 0px;
+   padding-bottom: 0px;
+   border: 2px solid black;
+   padding-right: 20px;
+   margin-top: 10px;
+}
+h1{
+    color: #111; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 150px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center;
+    font-size: clamp(1rem, 5vw + 1rem, 6rem);
+}
+.div1 h1{
+    color: black;
+    text-shadow: -5px 5px #fe921f, -10px 10px #558abb,  -15px 15px salmon;
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 120px; 
+    font-weight: bold; 
+    letter-spacing: 5px; 
+    line-height: 1; 
+    padding-right: 0;
+    margin:0px;
+    font-size: clamp(1rem, 5vw + 1rem, 7rem);
+    text-align: center;
+}
+h2{
+    color: #111; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 30px; 
+    font-weight: 300; 
+    line-height: 1.2;
+    margin: 0 0 72px; 
+    text-align: center;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    
+}
+
+.div2{
+    margin: 0px;
+    padding: 0px;
+    bottom: 0px;
+    position: relative;
+    width:100%;
+    height: 100%;
+    display: grid;
+    text-align: center;
+    background: #fe921f;
+    border-top: 2px solid black;
+    background-image: linear-gradient(-45deg, #FA8072 1%, #fe921f);
+    max-height: 950px;
+    
+    
+}
+.div2 h2{
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-weight: 800;
+    
+    padding-top: 5%;
+    letter-spacing: 5px;
+    font-size: 30px;
+    text-shadow: -3px 3px #fe921f, -5px 5px #558abb,  -7px 7px black;
+    text-align: center;
+    
+}
+
+button{
+
+    background-color: beige;
+    border: none;
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+button:hover{
+    background-color: burlywood;
+    color:white;
+}
+
+a:link { 
+    text-decoration: none; 
+    
+  } 
+  a:visited { 
+    text-decoration: none; 
+ 
+  } 
+  a:hover { 
+    text-decoration: none; 
+
+  } 
+  a:active { 
+    text-decoration: none; 
+   
+  }
+  input[type="option"], select, textarea {
+    margin-bottom: 5px; 
+    padding: 4px;
+    width: 100% 
+  }
+  
+  #ownerfirstName, #ownerlastName, #ownerEmail{
+    width: 100%;
+  }
+
+  .compatibility-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    
+}
+
+
+input[type="checkbox"] {
+    margin-right: 15px;
+    vertical-align:middle;
+    background-color: #fff;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+}
+input[type="text"], input[type="email"]{
+    padding: 5px;
+    margin: 2px;
+}
+legend{
+    font-weight: bolder;
+    color: black;
+    font-family: 'Lato', sans-serif; 
+}
+label{
+    font-family:'Lato', sans-serif; 
+     color: black;
+}
+
+p,ul, .div4{
+    color: #685206; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: clamp(0.5rem, 0.875rem, 1rem);
+    line-height: 24px; 
+    margin: 0 0 24px; 
+}
+.div4{
+    
+    background: #fe921f; 
+    color: #ffffff; 
+    display: inline-block; 
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold;
+    line-height: 1; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    margin-bottom: 0px;
+    width: 100%;
+    padding-right:0px;
+    background-image: linear-gradient(to left, #FA8072 1%, #fe921f);
+    overflow-y:auto;
+    height: 1600px;
+    
+}
+.div4 h1{
+    margin-left: 1vw; 
+    text-align: center;
+    font-size: clamp(2px, 5vw + 1rem, 9.375rem);
+    
+}
+
+.div4 div p{
+    text-wrap: balance;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    
+}
+.div4 h3{
+    font-size: 17.5px; 
+    margin-left: -10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; 
+    line-height: 32px; 
+    margin: 0 0 20px;
+    letter-spacing: 3px; 
+    color: black;
+    text-shadow: 1px 5px salmon;
+
+}
+.div4 ul{
+    text-wrap:balance;
+    margin-left: 50px;
+    padding: 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+#bottom{
+    
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 30px; 
+    font-weight: 300; 
+    line-height: 32px; 
+    margin: 0 0 72px; 
+    text-align: center;
+    color: white;
+    text-shadow: -3px 3px black;
+
+}
+img{
+    margin: 0px;
+    padding: 0px;
+    box-shadow:-5px 5px #fe921f, -10px 10px #558abb,  -15px 15px black, 5px -5px #fe921f, 10px -10px #558abb, 15px -15px black;
+    width: min(5%, 6.25rem);
+    height: min(5%, 6.25rem);
+}
+
+.parent {
+   
+    display: grid;
+    grid-template-columns: 0.5fr repeat(4, 1fr);
+    grid-template-rows: 0.25fr repeat(3, 1fr) 0.25fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 6; }
+    .div3 { grid-area: 2 / 1 / 5 / 2; }
+    .div2 { grid-area: 5 / 1 / 6 / 6; }
+    .div4 { grid-area: 2 / 2 / 5 / 6; }
+
+
+#dogcareTitle{
+    text-shadow: 1px 10px salmon;
+}
+body{
+   background-image: linear-gradient(to left, #FA8072 1%, #fe921f);
+
+}
+.div2 a:link { 
+    text-decoration: none; 
+    
+  } 
+.div2  a:visited { 
+    text-decoration: none; 
+    color: transparent;
+  }
+.div2  a:hover { 
+    text-decoration: none; 
+    color: white;
+  } 
+.div2 a:active { 
+    text-decoration: none; 
+   
+  }
+input{
+    background-color: salmon;
+}
+input::placeholder{
+    color:white
+}
+select{
+    
+    background-color: salmon;
+    color: white;
+}
+textarea{
+    background-color: salmon;
+    color: white;
+}
+textarea::placeholder{
+    color: white;
+}
+
+.div1 tr td{
+    text-align: center;
+
+}
+#date-time
+{
+    text-align: right;
+}
+#hidden {
+    display: none;
+    
+}

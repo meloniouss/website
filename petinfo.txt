@@ -1,0 +1,6 @@
+
+1:Andrei2:cat:doesn't matter:none:0-2:male:no:no:no::a b:c@g.com
+5:Andrei2:dog:none:beagle:0-2:male:no:no:no::dd wasd:wasd@ggg.com
+6:Andrei2:dog:none:beagle:0-2:male:no:no:no::dd wasd:wasd@ggg.com
+7:Andrei2:dog:none:beagle:0-2:male:no:no:no::dd wasd:wasd@ggg.com
+8:Andrei2:dog:none:beagle:0-2:male:no:no:no::dd wasd:wasd@ggg.com

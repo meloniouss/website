@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADOPT-ME</title>
+    <link rel="stylesheet" href="../stylesheets/q8.css" type="text/css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <%- include('partials/side-menu.ejs') %>
+    <div class="div4">
+        <form id="animalDonationForm" action="/submit-pet" method="POST">
+        <fieldset>
+            <legend>ANIMAL DONATION FORM</legend>
+            <label>What type of animal are you giving away?</label>
+            <select id="antype" name="antype">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+            <label for="catBreed"> What breed is the cat? </label>
+            <select id="catBreed" name="catBreed">
+                <option value="none">It's not a cat</option>
+                <option value="doesn't matter">Mixed breed</option>
+                <option value="other">Other</option>
+                <option value="persian">Persian</option>
+                <option value="siamese">Siamese</option>
+                <option value="maine coon">Maine Coon</option>
+                <option value="ragdoll">Ragdoll</option>
+                <option value="bengal">Bengal</option>
+                <option value="sphynx">Sphynx</option>
+                <option value="abyssinian">Abyssinian</option>
+                <option value="british shorthair">British Shorthair</option>
+                <option value="scottish fold">Scottish Fold</option>
+                <option value="burmese">Burmese</option>
+                <option value="russian blue">Russian Blue</option>
+                <option value="oriental">Oriental</option>
+                <option value="savannah">Savannah</option>
+                <option value="norwegian forest cat">Norwegian Forest Cat</option>
+            </select>
+            <label for="dogBreed">What breed is the dog?</label>
+            <select id="dogBreed" name="dogBreed">
+                <option value="none">It's not a dog</option>
+                <option value="doesn't matter">Mixed breed</option>
+                <option value="labrador retriever">Labrador Retriever</option>
+                <option value="german shepherd">German Shepherd</option>
+                <option value="golden retriever">Golden Retriever</option>
+                <option value="bulldog">Bulldog</option>
+                <option value="poodle">Poodle</option>
+                <option value="beagle">Beagle</option>
+                <option value="boxer">Boxer</option>
+                <option value="dachshund">Dachshund</option>
+                <option value="siberian husky">Siberian Husky</option>
+                <option value="pomeranian">Pomeranian</option>
+                <option value="shih tzu">Shih Tzu</option>
+                <option value="chihuahua">Chihuahua</option>
+                <option value="border collie">Border Collie</option>
+                <option value="rottweiler">Rottweiler</option>
+                <option value="great dane">Great Dane</option>
+            </select>
+            <br>
+            <label for="age"> Pet's age: </label>
+            <select id="age" name="age">
+                <option value="0-2">0 - 2 years</option>
+                <option value="2-5">2 - 5 years</option>
+                <option value="5-8">5 - 8 years</option>
+                <option value="8-11">8 - 11 years</option>
+                <option value="11-15">11 - 15 years</option>
+                <option value="15+">15+ years</option>
+            </select>
+            
+            <label for="gender">Pet's Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            
+            <label>Compatibility:</label>
+            <br><br>
+            <div class="compatibility-checkbox">
+                <input type="checkbox" id="otherDogs" name="otherDogs">
+                <label for="otherDogs">Gets along with other dogs</label>
+            </div>
+            
+            <div class="compatibility-checkbox">
+                <input type="checkbox" id="otherCats" name="otherCats">
+                <label for="otherCats">Gets along with other cats</label>
+            </div>
+            
+            <div class="compatibility-checkbox">
+                <input type="checkbox" id="smallChildren" name="smallChildren">
+                <label for="smallChildren">Gets along with small children</label>
+            </div>
+            <br>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="1" cols="26" placeholder="Tell us about the pet..."></textarea>
+            <br>
+            <label>Owner's Name:</label> <br>
+            <input type="text" id="ownerfirstName" name="ownerfirstName" placeholder="Enter owner's Surname">
+            <input type="text" id="ownerlastName" name="ownerlastName" placeholder="Enter owner's Family Name">
+            <br>
+            <label for="ownerEmail">Owner's Email:</label>
+            <input type="email" id="ownerEmail" name="ownerEmail" placeholder="Enter owner's email">
+            <br><br>
+            <input type="submit" value="submit">
+            <button type="reset">Clear</button>
+            <br><br>
+        </fieldset>
+        <p id="hidden">ERROR: Please enter valid information.</p>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".div4");
+    if (form) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            
+            if (!validateForm()) {
+                const error = document.getElementById("hidden").style.display = "block";
+                document.getElementById("hidden").style.color = "red";
+                document.getElementById("hidden").style.background = "white";
+                document.getElementById("hidden").style.fontWeight = "800";
+                alert("INVALID FORM SUBMISSION");
+            } else {
+                const error = document.getElementById("hidden").style.display = "none";
+            }
+        });
+    } else {
+        console.error("Form element not found.");
+    }
+
+    function validateForm() {
+        const antype = document.getElementById("antype").value;
+        const catBreed = document.getElementById("catBreed").value;
+        const dogBreed = document.getElementById("dogBreed").value;
+        const ownerEmail = document.getElementById("ownerEmail").value;
+        const ownerFirstName = document.getElementById("ownerfirstName").value;
+        const ownerLastName = document.getElementById("ownerlastName").value;
+
+        // Check if any required fields are empty
+        if (antype === "" || (antype === "cat" && catBreed === "") || (antype === "dog" && dogBreed === "") || ownerEmail === "") {
+            return false;
+        }
+        if(antype ==="dog" && dogBreed ==="none")
+        {
+            return false;
+        }
+        if(antype ==="cat" && catBreed ==="none")
+        {
+            return false;
+        }
+        if(antype ==="dog" && catBreed !== "none")
+        {
+            return false;
+        }
+        if(antype ==="cat" && dogBreed !== "none")
+        {
+            return false;
+        }
+        //checking if the owner's name contains numbers
+        const nameRegex = /\d/;
+        if (nameRegex.test(ownerFirstName) || nameRegex.test(ownerLastName)) {
+            return false;
+        }
+        // Checking if owner's email follows a valid format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(ownerEmail)) {
+            return false;
+        }
+        return true;
+    }
+    });
+    </script>
+    <script>
+        document.getElementById('animalDonationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = {
+            ownerfirstName: document.getElementById('ownerfirstName').value,
+            ownerlastName: document.getElementById('ownerlastName').value,
+            ownerEmail: document.getElementById('ownerEmail').value,
+            antype: document.getElementById('antype').value,
+            catBreed: document.getElementById('catBreed').value,
+            dogBreed: document.getElementById('dogBreed').value,
+            age: document.getElementById('age').value,
+            gender: document.getElementById('gender').value,
+            comments: document.getElementById('comments').value
+            };
+          fetch('/donate/submit-pet', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(response => response.json())
+          .then(data => {
+            alert(data.message);
+            // Optionally, redirect or perform other actions after successful form submission
+          })
+          .catch(error => {
+            console.error('Error submitting form:', error);
+            alert('An error occurred while submitting the form');
+          });
+        });
+      </script>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>

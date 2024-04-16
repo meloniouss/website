@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADOPT-ME</title>
+    <link rel="stylesheet" href="../stylesheets/q8.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/q7.css" type="text/css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <%- include('partials/side-menu.ejs') %>
+    <div class="div4">
+        <form>
+        <fieldset>
+            <legend>ANIMAL SEARCH FORM</legend>
+            <label for="antype">Which animal would you like?</label>
+            <select id="antype" name="antype">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+            </select>
+            <label for="catBreed">Which cat breed would you like?</label>
+            <select id="catBreed" name="catBreed">
+                <option value="none">I don't want a cat</option>
+                <option value="doesn't matter">Doesn't Matter</option>
+                <option value="other">Other</option>
+                <option value="persian">Persian</option>
+                <option value="siamese">Siamese</option>
+                <option value="maine coon">Maine Coon</option>
+                <option value="ragdoll">Ragdoll</option>
+                <option value="bengal">Bengal</option>
+                <option value="sphynx">Sphynx</option>
+                <option value="abyssinian">Abyssinian</option>
+                <option value="british shorthair">British Shorthair</option>
+                <option value="scottish fold">Scottish Fold</option>
+                <option value="burmese">Burmese</option>
+                <option value="russian blue">Russian Blue</option>
+                <option value="oriental">Oriental</option>
+                <option value="savannah">Savannah</option>
+                <option value="norwegian forest cat">Norwegian Forest Cat</option>
+            </select>
+            <label for="dogBreed">Which dog breed would you like?</label>
+            <select id="dogBreed" name="dogBreed">
+                <option value="none">I don't want a dog</option>
+                <option value="doesn't matter">Doesn't Matter</option>
+                <option value="other">Other</option>
+                <option value="labrador retriever">Labrador Retriever</option>
+                <option value="german shepherd">German Shepherd</option>
+                <option value="golden retriever">Golden Retriever</option>
+                <option value="bulldog">Bulldog</option>
+                <option value="poodle">Poodle</option>
+                <option value="beagle">Beagle</option>
+                <option value="boxer">Boxer</option>
+                <option value="dachshund">Dachshund</option>
+                <option value="siberian husky">Siberian Husky</option>
+                <option value="pomeranian">Pomeranian</option>
+                <option value="shih tzu">Shih Tzu</option>
+                <option value="chihuahua">Chihuahua</option>
+                <option value="border collie">Border Collie</option>
+                <option value="rottweiler">Rottweiler</option>
+                <option value="great dane">Great Dane</option>
+            </select>
+            <br>
+            <label for="age"> Preferred age: </label>
+            <select id="age" name="age">
+                <option value="doesn't matter">Doesn't Matter</option>
+                <option value="0-2">0 - 2 years</option>
+                <option value="2-5">2 - 5 years</option>
+                <option value="5-8">5 - 8 years</option>
+                <option value="8-11">8 - 11 years</option>
+                <option value="11-15">11 - 15 years</option>
+            </select>
+            
+            <label for="gender">Preferred Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="doesn't matter">Doesn't Matter</option>
+            </select>
+            <label>Compatibility:</label>
+            <br><br>
+            <div class="compatibility-checkbox">
+                <input type="checkbox" id="otherDogs" name="otherDogs">
+                <label for="otherDogs">Gets along with other dogs</label>
+            </div>
+            
+            <div class="compatibility-checkbox">
+                <input type="checkbox" id="otherCats" name="otherCats">
+                <label for="otherCats">Gets along with other cats</label>
+            </div>
+            
+            <div class="compatibility-checkbox">
+                <input type="checkbox" id="smallChildren" name="smallChildren">
+                <label for="smallChildren">Gets along with small children</label>
+            </div>
+            <input type="submit" value="submit"/>
+            <input type="reset">CLEAR</button>
+            <br><br>
+        </fieldset>
+    </form>
+        <p id="hidden">ERROR: Please select a valid breed, either a dog or a cat.</p>
+    <div class="pets-container" id="pet-container">
+        <div id="pet1" class="pet">
+            <table>
+                <tr>
+                    <td><img src="../ActualBingus.jpg" alt="bingus"></td>
+                    
+                </tr>
+                    <tr>
+                        <td><h4>BINGUS</h4></td>
+                    </tr>
+                    <tr>
+                        <td><h3>cat</h3></td>   
+                    </tr>
+                <tr>
+                    <td><p>MALE,15</p></td>
+                </tr>
+                <tr>
+                    <td><p class="compatibility-info">GETS ALONG WITH:</p></td>
+                </tr>
+                <tr>
+                    <td><p id="cat-siamese">Breed : Sphynx</p></td>
+                </tr>
+                <tr>
+                    <td><p>Unique traits: blamed for Roswell</p></td>
+                </tr>
+                <tr>
+                    <td><p>OWNER CONTACT : superman@gmail.com</p></td>
+                </tr>
+                <tr>
+                    <td><button>Interested</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="pet2" class="pet">
+            <table>
+                <tr>
+                    <td><img src="../side_eye_cat.jpg" alt="cat eating food menacingly"></td>
+                </tr>
+                <tr>
+                    <td><h4>SIDE EYE SAM</h4></td>
+                    
+                </tr>
+                <tr>
+                    <td><h3>cat</h3></td>
+                </tr>
+                <tr>
+                    <td><p>MALE, 2</p></td>
+                </tr>
+                <tr>
+                    <td><p class="compatibility-info">KIDS,ADULTS,PETS</p></td>
+                </tr>   
+                <tr>
+                    <td><p id="cat-siamese">Breed : Abyssinian</p></td>
+                </tr>
+                <tr>
+                    <td><p>UNIQUE TRAITS : GOVERNMENT WHISTLEBLOWER</p></td>
+                </tr>
+                <tr>
+                    <td><p>OWNER CONTACT: FATSMOKE@HOTMAIL.COM</p></td>
+                </tr>
+                <tr>
+                    <td><button>Interested</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="pet" id="pet3">
+            <table>
+                <tr>
+                    <td><img src="../sdc.jpg" alt="sus dog"></td>
+                </tr>
+                <tr>
+                    <td><h4>SUSSYMASTER</h4></td>
+                    
+                </tr>
+                <tr>
+                    <td><h3>dog</h3></td>
+                </tr>
+                <tr>
+                    <td><p>Female,5</p></td>
+                </tr>
+                <tr>
+                    <td><p class="compatibility-info" >GETS ALONG WITH: KIDS, ADULTS, PETS</p></td>
+                </tr>
+                <tr>
+                    <td><p id="dog-dachsund">Breed : DACHSHUND</p></td>
+                </tr>
+                <tr>
+                    <td><p>UNIQUE TRAITS : LIE DETECTOR</p></td>
+                </tr>
+                <tr>
+                    <td><p>OWNER CONTACT: carljohnson@yahoo.ca</p></td>
+                </tr>
+                <tr>
+                    <td><button>Interested</button></td>
+                </tr>
+            </table>
+        </div>
+        <div id="pet4"class="pet">
+            <table>
+                <tr>
+                    <td><img src="../salty.png" alt="scared dog"></td>
+                </tr>
+                <tr>
+                    <td>SALTY</td>
+                    
+                </tr>
+                <tr><td><h3>dog</h3></td></tr>
+                <tr>
+                    <td><p>Male,1</p></td>
+                </tr>
+                <tr>
+                    <td><p class="compatibility-info" >GETS ALONG WITH: KIDS, ADULTS, PETS</p></td>
+                </tr>
+                <tr>
+                    <td><p id="dog-greyhound">Breed : GREYHOUND</p></td>
+                </tr>
+                <tr>
+                    <td><p>UNIQUE TRAITS : BUCK TEETH</p></td>
+                </tr>
+                <tr>
+                    <td><p>OWNER CONTACT: igotrobbed@gmail.com</p></td> 
+                </tr>
+                <tr>
+                    <td><button>Interested</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        const pets = document.querySelectorAll('.pet');
+    
+        function filterPets() {
+            const antype = document.getElementById('antype').value;
+            const catBreed = document.getElementById('catBreed').value;
+            const dogBreed = document.getElementById('dogBreed').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const otherDogs = document.getElementById('otherDogs').checked;
+            const otherCats = document.getElementById('otherCats').checked;
+            const smallChildren = document.getElementById('smallChildren').checked;
+            
+            pets.forEach(pet => {
+                pet.style.display = 'none';
+            });
+            const petContainer = document.getElementById('pet-container');
+            petContainer.innerHTML = '';
+            if (antype === 'cat') {
+                console.log("Cat chosen");
+                pets.forEach(pet => {
+                    const petType = pet.querySelector('h3').innerText.toLowerCase();
+                    const petBreed = pet.querySelector('p[id^="' + petType + '"]').innerText.split('Breed : ')[1].toLowerCase();
+                    const petAge = parseInt(pet.querySelector('p').innerText.split(',')[1]);
+                    const petGender = pet.querySelector('p').innerText.split(',')[0].toLowerCase();
+                   
+                    const petCompatibilityString = pet.querySelector('.compatibility-info').innerText.toUpperCase();
+                        const compatibilityKeywords = ['KIDS', 'ADULTS', 'PETS'];
+
+                        // Initialize compatibility flags
+                        let petKidsCompatibility = false;
+                        let petAdultsCompatibility = false;
+                        let petOtherPetsCompatibility = false;
+
+                        // Remove spaces after commas in the compatibility string
+                        const cleanCompatibilityString = petCompatibilityString.replace(/,\s+/g, ',');
+                        const compatibilityArray = cleanCompatibilityString.split(',').map(keyword => keyword.trim());
+                        console.log("Clean Compatibility String:", cleanCompatibilityString);
+                        console.log("Compatibility Array:", compatibilityArray);
+                        // Check if each compatibility keyword exists in the array
+                        compatibilityArray.forEach(keyword => {
+                            if (compatibilityKeywords.includes(keyword)) {
+                                if (keyword === 'KIDS') {
+                                    petKidsCompatibility = true;
+                                } else if (keyword === 'ADULTS') {
+                                    petAdultsCompatibility = true;
+                                } else {
+                                    petOtherPetsCompatibility = true;
+                                }
+                            }
+                        });
+
+                    console.log("Pet Kids Compatibility:", petKidsCompatibility);
+                    console.log("Pet Adults Compatibility:", petAdultsCompatibility);
+                    console.log("Pet Other Pets Compatibility:", petOtherPetsCompatibility);
+                    console.log("Other Dogs Compatibility:", otherDogs);
+                    console.log("Other Cats Compatibility:", otherCats);
+                    console.log("Small Children Compatibility:", smallChildren);
+                    const ageRange = age.split('-').map(Number);
+
+                    console.log("Age Range:", ageRange); // Check if age range is correctly parsed
+
+                    // Log the pet's age for debugging
+                    console.log("Pet Age:", petAge);
+
+                    // Check if the pet's age falls within the specified range
+                    const ageInRange = ageRange[0] <= petAge && petAge <= ageRange[1];
+                    console.log("Age in Range:", ageInRange); // Log if the pet's age falls within the range
+                    
+
+                    // Adjust the condition to check if the pet's age is within the specified range
+                    if (petType === 'cat' &&
+                    ((age === "doesn't matter" || ageInRange) &&
+                    (gender === "doesn't matter" || petGender == gender) &&
+                    (smallChildren || !petKidsCompatibility) &&
+                    (otherDogs || !petOtherPetsCompatibility) &&
+                    (otherCats || !petAdultsCompatibility) &&
+                    (catBreed == "doesn't matter" || catBreed == petBreed))) {
+                    // Display and append the pet if it meets the filtering criteria
+                    pet.style.display = 'flex';
+                    petContainer.appendChild(pet.cloneNode(true));
+                }  
+                    
+                    
+                });
+
+            } 
+            else if (antype == 'dog'){
+                console.log("dog chosen");
+                pets.forEach(pet => {
+                    const petType = pet.querySelector('h3').innerText.toLowerCase();
+                    const petBreed = pet.querySelector('p[id^="' + petType + '"]').innerText.split('Breed : ')[1].toLowerCase();
+                    const petAge = parseInt(pet.querySelector('p').innerText.split(',')[1]);
+                    const petGender = pet.querySelector('p').innerText.split(',')[0].toLowerCase();
+                    const petKidsCompatibility = pet.querySelector('p').innerText.toLowerCase().includes('kids');
+                    const petAdultsCompatibility = pet.querySelector('p').innerText.toLowerCase().includes('cats');
+                    const petOtherPetsCompatibility = pet.querySelector('p').innerText.toLowerCase().includes('dogs');
+                    const ageRange = age.split('-').map(Number);
+
+                    console.log("Age Range:", ageRange); // Check if age range is correctly parsed
+
+                    // Log the pet's age for debugging
+                    console.log("Pet Age:", petAge);
+
+                    // Check if the pet's age falls within the specified range
+                    const ageInRange = ageRange[0] <= petAge && petAge <= ageRange[1];
+                    console.log("Age in Range:", ageInRange); // Log if the pet's age falls within the range
+
+                    // Adjust the condition to check if the pet's age is within the specified range
+                    if (petType === 'dog' &&
+                        ((age === "doesn't matter" || ageInRange) &&
+                        (gender === "doesn't matter" || petGender == gender) &&
+                        (smallChildren || !petKidsCompatibility) &&
+                        (otherDogs || !petOtherPetsCompatibility) &&
+                        (otherCats || !petAdultsCompatibility) &&
+                        (dogBreed === "doesn't matter" || dogBreed === petBreed))) {
+                        // Display and append the pet if it meets the filtering criteria
+                        pet.style.display = 'flex';
+                        petContainer.appendChild(pet.cloneNode(true));
+                    }
+                    
+                });
+            }
+                         
+            
+            else{
+                pet.style.display = 'none';
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector(".div4 form");
+            if (form) {
+                console.log("Form element found.");
+                form.addEventListener("submit", function(event) {
+                    console.log("submitPressed");
+                    event.preventDefault();
+                    if (!validateForm()) {
+                        const error = document.getElementById("hidden").style.display = "block";
+                        document.getElementById("hidden").style.color = "red";
+                        document.getElementById("hidden").style.background = "white";
+                        document.getElementById("hidden").style.fontWeight = "800";
+                    } else {
+                        const error = document.getElementById("hidden").style.display = "none";
+                        filterPets();
+                    }
+                });
+            }
+            document.getElementById('antype').addEventListener('change', filterPets);
+            document.getElementById('catBreed').addEventListener('change', filterPets);
+            document.getElementById('age').addEventListener('change', filterPets);
+            document.getElementById('gender').addEventListener('change', filterPets);
+            document.getElementById('smallChildren').addEventListener('change', filterPets);
+            document.getElementById('otherDogs').addEventListener('change', filterPets);
+            document.getElementById('otherCats').addEventListener('change', filterPets);
+            filterPets();
+        });
+    
+        function validateForm() {
+            const antype = document.getElementById("antype").value;
+            const catBreed = document.getElementById("catBreed").value;
+            const dogBreed = document.getElementById("dogBreed").value;
+    
+            if (catBreed === "none" && dogBreed === "none") {
+                return false;
+            }
+            if (antype === "cat" && catBreed === "none") {
+                return false;
+            }
+            if (antype === "dog" && dogBreed === "none") {
+                return false;
+            }
+            if (antype === "dog" && catBreed !== "none") {
+                return false;
+            }
+            if (antype === "cat" && dogBreed !== "none") {
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+    
+    <%- include('partials/footer.ejs') %>
+</body> 
+</html>
