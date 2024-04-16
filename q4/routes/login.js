@@ -36,14 +36,8 @@ router.post('/login', (req, res) => {
 router.get('/logout', (req, res) => {
   // Destroy the session
   
-  req.session.destroy(err => {
-      if (err) {
-          console.log(err);
-      } else {
-          // Redirect to the login page after logout
-          res.render('index', {message: 'You have been logged out'});
-      }
-  });
+  req.session = null;
+  res.render('index', {message: 'You have been logged out'});
 });
 
 module.exports = router;
